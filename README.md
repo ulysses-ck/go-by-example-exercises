@@ -1,0 +1,1 @@
+This repo contains the exercises that i've followed in [Go by Example](https://gobyexample.com)
