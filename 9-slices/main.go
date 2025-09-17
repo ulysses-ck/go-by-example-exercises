@@ -43,12 +43,16 @@ func main() {
 
 	twoD := make([][]int, 3)
 
+	// for i := range 10 { error when out of range, obviously, but i though LSP could catch it
+	// i don't know if others do, or even sonarqube can catch it
+	// but could be bloat
 	for i := range 3 {
 		innerLen := i + 1
 		twoD[i] = make([]int, innerLen)
 		for j := range innerLen {
 			twoD[i][j] = i + j
 		}
-
 	}
+
+	fmt.Println("2d: ", twoD)
 }
