@@ -43,7 +43,7 @@ func main() {
 
 	twoD := make([][]int, 3)
 
-	// for i := range 10 { error when out of range, obviously, but i though LSP could catch it
+	// for i := range 10 { error when out of range, obviously, but i thought LSP could catch it
 	// i don't know if others do, or even sonarqube can catch it
 	// but could be bloat
 	for i := range 3 {
