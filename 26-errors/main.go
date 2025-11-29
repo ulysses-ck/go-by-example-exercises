@@ -20,7 +20,7 @@ func makeTea(arg int) error {
 	if arg == 2 {
 		return ErrOutOfTea
 	} else if arg == 4 {
-		return fmt.Errorf("making tea: %s", ErrPower)
+		return fmt.Errorf("making tea: %w", ErrPower)
 	}
 
 	return nil
@@ -45,6 +45,8 @@ func main() {
 			} else {
 				fmt.Printf("unknown error: %s\n", err)
 			}
+			continue
 		}
+		fmt.Println("Tea is ready!")
 	}
 }
